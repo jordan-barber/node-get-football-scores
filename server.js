@@ -20,7 +20,7 @@ function promptValidator(league, from, to) {
 
 function apiRequest(from, to) {
     request({
-        uri: 'https://api.crowdscores.com/v1/matches?competition_id=2&from=' + from + '&to=' + to,
+        uri: 'https://api.crowdscores.com/v1/matches?competition_id=2&from=' + from + 'T12:00:00-03:00&to=' + to + "T12:00:00-03:00",
         method: 'GET',
         headers: {'x-crowdscores-api-key': '16d3b40b80c7466da94d8da362a19e7b'},
     }, function(error, res, body) {
